@@ -17,11 +17,16 @@ main {
   /* background-color: red; */
 }
 
+p {
+
+}
+
 .app-form {
   padding: 20px;
   border: 1px solid lightblue;
   margin: 0 auto;
   width: 30%;
+  min-width: 300px;
   margin-top: 4%;
   border-radius: 6px;
 }
@@ -42,6 +47,29 @@ button {
   border: 1px solid lightgray;
 }
 
-.app-form h2 {
+h2 {
   margin-bottom: 10px;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.help {
+  text-align: justify;
+  width: 30%;
+  min-width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+p{
+  margin-bottom: 5px;
 }
