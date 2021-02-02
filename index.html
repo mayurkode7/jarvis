@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarvis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Use Voice Commands!!</h1>
+
+      <form action="" class="app-form" id="connect">
+        <h2>Get in touch!!</h2>
+        <input type="text" id="name" placeholder="Name" />
+        <input type="tel" id="mobile" placeholder="Mobile Number" />
+        <input type="text" id="loc" placeholder="Location" />
+        <button type="submit" id="sub">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </main>
+
+    <script src="annyang.min.js"></script>
+    <script>
+      if (annyang) {
+        // Let's define our first command. First the text we expect, and then the function it should call
+        var commands = {
+          "write name *tag": function (variable) {
+            console.log(variable);
+            let txtName = document.getElementById("name");
+            console.log(txtName);
+            txtName.value = variable;
+          },
+
+          "write mobile number *tag": function (variable) {
+            let txtMobile = document.getElementById("mobile");
+            txtMobile.value = variable;
+          },
+
+          "write location *tag": function (variable) {
+            let txtEmail = document.getElementById("loc");
+            txtEmail.value = variable;
+          },
+
+          "press submit": function (variable) {
+            window.alert("We will get back to you");
+          },
+
+          "press reset": function (variable) {
+            let frm = document.getElementById("connect");
+            frm.reset();
+          },
+        };
+
+        // Add our commands to annyang
+        annyang.addCommands(commands);
+
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+      }
+    </script>
+  </body>
+</html>

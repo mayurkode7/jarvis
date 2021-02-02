@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: #4c8bf5;
+}
+
+main {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.app-form {
+  padding: 20px;
+  border: 1px solid lightblue;
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 4%;
+  border-radius: 6px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+button {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+.app-form h2 {
+  margin-bottom: 10px;
+}
